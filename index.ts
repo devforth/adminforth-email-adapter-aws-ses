@@ -9,7 +9,7 @@ export default class EmailAdapterAwsSes implements EmailAdapter {
     this.options = options;
   }
 
-  validate() {
+  async validate() {
     if (!this.options.region) {
       throw new Error("AWS SES region is required");
     }
@@ -21,13 +21,16 @@ export default class EmailAdapterAwsSes implements EmailAdapter {
     }
   }
 
-  sendEmail = async (
+  async sendEmail(
     from: string,
     to: string,
     text: string,
     html: string,
     subject: string
-  ) => {
+  ): Promise<{
+    error?: string;
+    ok?: boolean;
+  }> {
     // send email with AWS SES this.options.providerOptions.AWS_SES
     const ses = new SESClient({
       region: this.options.region,
