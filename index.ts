@@ -25,7 +25,7 @@ export default class EmailAdapterAwsSes implements EmailAdapter {
     from: string,
     to: string,
     text: string,
-    html: string,
+    html: string | undefined,
     subject: string
   ): Promise<{
     error?: string;
@@ -50,10 +50,12 @@ export default class EmailAdapterAwsSes implements EmailAdapter {
             Charset: "UTF-8",
             Data: text,
           },
-          Html: {
-            Charset: "UTF-8",
-            Data: html,
-          },
+          ...(html ? {
+            Html: {
+              Charset: "UTF-8",
+              Data: html,
+            },
+          } : {}),
         },
         Subject: {
           Charset: "UTF-8",
