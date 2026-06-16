@@ -11,10 +11,10 @@ importers:
       '@aws-sdk/client-ses':
         specifier: ^3.654.0
         version: 3.1002.0
-      adminforth:
-        specifier: ^2.24.0
-        version: 2.58.6(@types/node@25.8.0)(typescript@5.9.3)
     devDependencies:
+      adminforth:
+        specifier: ^2.73.1
+        version: 2.73.1(@types/node@25.8.0)(typescript@5.9.3)
       semantic-release:
         specifier: ^24.2.1
         version: 24.2.9(typescript@5.9.3)
@@ -696,8 +696,8 @@ packages:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
 
-  adminforth@2.58.6:
-    resolution: {integrity: sha512-swacaGnMM33vPSXSvv7Q2I6K9eagosmkeUmNBgjb6nTFYvfIXtZV3KjG7EkmSKqaR/yqdcidn9xC4w9Y8H7i9Q==}
+  adminforth@2.73.1:
+    resolution: {integrity: sha512-ajmgBxT1FD0nDYdTrAOMsvzpvH5O5jETklp6FnT+wxfXVtIN1AL1+STbbpHKIebdpVt878CFakdfihsIw5xhjg==}
     hasBin: true
 
   agent-base@7.1.4:
@@ -3854,7 +3854,7 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  adminforth@2.58.6(@types/node@25.8.0)(typescript@5.9.3):
+  adminforth@2.73.1(@types/node@25.8.0)(typescript@5.9.3):
     dependencies:
       '@babel/parser': 7.29.3
       '@clickhouse/client': 1.18.5
