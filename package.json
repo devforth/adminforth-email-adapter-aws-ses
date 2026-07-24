@@ -4,7 +4,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "homepage": "https://adminforth.dev/docs/tutorial/Adapters/email-adapter-aws-ses/",
   "repository": {
     "type": "git",
     "url": "https://github.com/devforth/adminforth-email-adapter-aws-ses.git"
@@ -18,7 +17,7 @@
   "keywords": [],
   "author": "DevForth (https://devforth.io)",
   "license": "MIT",
-  "description": "",
+  "description": "AdminForth email adapter for Amazon SES.",
   "dependencies": {
     "@aws-sdk/client-ses": "^3.654.0"
   },
